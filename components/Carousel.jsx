@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   bgContainer: StyleSheet.absoluteFillObject,
   illustration: {
     height: height,
-    width: width,
+    width: width * 1.5,
     resizeMode: "stretch",
   },
   flipCard: {},
