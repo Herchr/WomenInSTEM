@@ -6,17 +6,27 @@ import {
   text,
   StyleSheet,
   Dimensions,
+  ScrollView,
+  TouchableOpacity,
+  Pressable,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import FlipCard from "react-native-flip-card";
 
 const { height, width } = Dimensions.get("screen");
 const CardInfo = (props) => {
   const { woman } = props;
   return (
     <SafeAreaView style={styles.container}>
+      {/* <TouchableOpacity>
+        <Ionicons name="close" size={50} color="#555" />
+      </TouchableOpacity> */}
       <Text style={styles.header}>{woman.name}</Text>
-      <View style={styles.contentContainer}>
-        <Text style={styles.content}>{woman.content}</Text>
-      </View>
+      <ScrollView>
+        <View style={styles.contentContainer}>
+          <Text style={styles.content}>{woman.content}</Text>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

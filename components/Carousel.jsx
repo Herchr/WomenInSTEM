@@ -6,7 +6,6 @@ import {
   ScrollView,
   Image,
   Dimensions,
-  TouchableWithoutFeedback,
 } from "react-native";
 import Card from "./Card";
 import CardInfo from "./CardInfo";
@@ -50,7 +49,6 @@ const Carousel = (props) => {
 
   const scrollHandler = useAnimatedScrollHandler({
     onScroll: (event) => {
-      console.log(event.contentOffset.x);
       scrollX.value = event.contentOffset.x;
     },
   });
@@ -103,12 +101,10 @@ const Carousel = (props) => {
             <View key={index}>
               <FlipCard
                 style={styles.flipCard}
-                friction={20}
-                perspective={1000}
                 flipHorizontal={true}
                 flipVertical={false}
-                clickable={true}
-                onFlipStart={(isFlipEnd) => {
+                //clickable={!showCardInfo}
+                onFlipStart={() => {
                   if (showCardInfo == false) {
                     expand.value = 0;
                   }
@@ -127,7 +123,6 @@ const Carousel = (props) => {
                           }
                         );
                 }}
-                onFlipEnd={() => {}}
                 alignHeight
                 alignWidth
               >
