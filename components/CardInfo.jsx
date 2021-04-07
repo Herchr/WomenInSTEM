@@ -1,12 +1,22 @@
 import React from "react";
-import { SafeAreaView, Text, StyleSheet } from "react-native";
+import {
+  SafeAreaView,
+  View,
+  Text,
+  text,
+  StyleSheet,
+  Dimensions,
+} from "react-native";
 
+const { height, width } = Dimensions.get("screen");
 const CardInfo = (props) => {
   const { woman } = props;
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>{woman.name}</Text>
-      <Text style={styles.content}>{woman.content}</Text>
+      <View style={styles.contentContainer}>
+        <Text style={styles.content}>{woman.content}</Text>
+      </View>
     </SafeAreaView>
   );
 };
@@ -24,12 +34,15 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     marginTop: 50,
   },
+  contentContainer: {
+    marginHorizontal: width * 0.1,
+    marginTop: height * 0.1,
+  },
   content: {
     color: "#222",
     fontSize: 20,
     fontWeight: "400",
-    paddingHorizontal: 50,
-    paddingTop: 30,
+    //borderWidth: 5,
   },
 });
 export default CardInfo;

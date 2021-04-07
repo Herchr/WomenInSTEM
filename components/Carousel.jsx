@@ -28,14 +28,24 @@ const Carousel = (props) => {
   const { women } = props;
 
   const [showCardInfo, setShowCardInfo] = useState(false);
-  console.log(showCardInfo);
+  //console.log(showCardInfo);
   const scrollX = useSharedValue(0);
   const expand = useSharedValue(0);
   const backHeight = useDerivedValue(() => {
-    return interpolate(expand.value, [0, 1], [height * 0.5, height]);
+    return interpolate(
+      expand.value,
+      [0, 1],
+      [height * 0.5, height],
+      Extrapolate.CLAMP
+    );
   });
   const backWidth = useDerivedValue(() => {
-    return interpolate(expand.value, [0, 1], [width * 0.7, width]);
+    return interpolate(
+      expand.value,
+      [0, 1],
+      [width * 0.7, width],
+      Extrapolate.CLAMP
+    );
   });
 
   const scrollHandler = useAnimatedScrollHandler({
@@ -93,21 +103,33 @@ const Carousel = (props) => {
             <View key={index}>
               <FlipCard
                 style={styles.flipCard}
-                friction={10}
+                friction={20}
+                perspective={1000}
                 flipHorizontal={true}
                 flipVertical={false}
                 clickable={true}
                 onFlipStart={(isFlipEnd) => {
+                  if (showCardInfo == false) {
+                    expand.value = 0;
+                  }
                   setShowCardInfo(!showCardInfo);
                   expand.value =
                     expand.value == 1
-                      ? withTiming(0, { duration: 500 })
-                      : withTiming(1, { duration: 500 });
+                      ? 0
+                      : withTiming(
+                          1,
+                          {
+                            duration: 500,
+                            easing: Easing.ease,
+                          },
+                          (finish) => {
+                            !finish ? (expand.value = 0) : null;
+                          }
+                        );
                 }}
                 onFlipEnd={() => {}}
                 alignHeight
                 alignWidth
-                useNativeDriver={true}
               >
                 <View
                   style={{
@@ -133,6 +155,7 @@ const Carousel = (props) => {
                           width: backWidth.value,
                         };
                       }),
+                      { overflow: "hidden", position: "absolute" },
                     ]}
                   >
                     <CardInfo woman={woman} />
