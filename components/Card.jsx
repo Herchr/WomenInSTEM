@@ -28,7 +28,7 @@ const Card = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: height * 0.5,
     width: width,
     justifyContent: "center",
     alignItems: "center",

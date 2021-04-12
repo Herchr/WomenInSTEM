@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   ScrollView,
   Image,
   Dimensions,
+  TouchableHighlight,
 } from "react-native";
 import Card from "./Card";
 import CardInfo from "./CardInfo";
@@ -19,7 +20,7 @@ import Animated, {
   withTiming,
   Easing,
 } from "react-native-reanimated";
-import FlipCard from "react-native-flip-card";
+import FlipCard from "./FlipCard/FlipCard";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -27,7 +28,7 @@ const Carousel = (props) => {
   const { women } = props;
 
   const [showCardInfo, setShowCardInfo] = useState(false);
-  //console.log(showCardInfo);
+  const [expandOut, setExpandOut] = useState(false);
   const scrollX = useSharedValue(0);
   const expand = useSharedValue(0);
   const backHeight = useDerivedValue(() => {
@@ -52,6 +53,30 @@ const Carousel = (props) => {
       scrollX.value = event.contentOffset.x;
     },
   });
+
+  useEffect(() => {
+    if (expandOut) {
+      expand.value = withTiming(
+        1,
+        {
+          easing: Easing.ease,
+        },
+        (finish) => {
+          !finish ? (expand.value = 0) : null;
+        }
+      );
+    } else {
+      expand.value = withTiming(
+        0,
+        {
+          easing: Easing.ease,
+        },
+        (finish) => {
+          !finish ? (expand.value = 0) : null;
+        }
+      );
+    }
+  }, [expandOut]);
   return (
     <View style={styles.container}>
       <View style={styles.bgContainer}>
@@ -103,36 +128,33 @@ const Carousel = (props) => {
                 style={styles.flipCard}
                 flipHorizontal={true}
                 flipVertical={false}
-                //clickable={!showCardInfo}
+                friction={18}
+                expandOut={expandOut}
+                setExpandOut={setExpandOut}
+                clickable={!showCardInfo}
                 onFlipStart={() => {
                   if (showCardInfo == false) {
                     expand.value = 0;
                   }
                   setShowCardInfo(!showCardInfo);
-                  expand.value =
-                    expand.value == 1
-                      ? 0
-                      : withTiming(
-                          1,
-                          {
-                            duration: 500,
-                            easing: Easing.ease,
-                          },
-                          (finish) => {
-                            !finish ? (expand.value = 0) : null;
-                          }
-                        );
+                  // expand.value =
+                  //   expand.value == 1
+                  //     ? 0
+                  //     : withTiming(
+                  //         1,
+                  //         {
+                  //           duration: 600,
+                  //           easing: Easing.ease,
+                  //         },
+                  //         (finish) => {
+                  //           !finish ? (expand.value = 0) : null;
+                  //         }
+                  //       );
                 }}
                 alignHeight
                 alignWidth
               >
-                <View
-                  style={{
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flex: 1,
-                  }}
-                >
+                <View style={{}}>
                   <Card woman={woman} />
                 </View>
                 <View

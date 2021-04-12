@@ -22,11 +22,11 @@ const CardInfo = (props) => {
         <Ionicons name="close" size={50} color="#555" />
       </TouchableOpacity> */}
       <Text style={styles.header}>{woman.name}</Text>
-      <ScrollView>
-        <View style={styles.contentContainer}>
+      <View style={styles.scrollViewContainer}>
+        <ScrollView>
           <Text style={styles.content}>{woman.content}</Text>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
@@ -37,22 +37,24 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF",
     borderRadius: 20,
     alignItems: "center",
+    paddingTop: 50,
   },
   header: {
     color: "#222",
     fontSize: 32,
     fontWeight: "400",
-    marginTop: 50,
+    marginTop: 80,
   },
-  contentContainer: {
+  scrollViewContainer: {
+    height: height * 0.6,
     marginHorizontal: width * 0.1,
-    marginTop: height * 0.1,
+    marginTop: height * 0.05,
   },
+  contentContainer: {},
   content: {
     color: "#222",
     fontSize: 20,
     fontWeight: "400",
-    //borderWidth: 5,
   },
 });
 export default CardInfo;
