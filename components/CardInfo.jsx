@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
   },
   header: {
     color: "#222",
-    fontSize: 32,
-    fontWeight: "400",
+    fontSize: 30,
+    fontWeight: "500",
     marginTop: 80,
   },
   scrollViewContainer: {
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
     marginHorizontal: width * 0.1,
     marginTop: height * 0.05,
   },
-  contentContainer: {},
   content: {
     color: "#222",
     fontSize: 20,

@@ -8,14 +8,6 @@ export const women = [
   },
   {
     id: 2,
-    name: "Rosalind Franklin",
-    illustration: require("./assets/Rosalind_Franklin.png"),
-    content: `Rosalind Franklin, in full Rosalind Elsie Franklin, (born July 25, 1920,London, England—died April 16, 1958, London), British scientist best known for her contributions to the discovery of the molecular structure of deoxyribonucleic acid (DNA), a constituent of chromosomes that serves to encode genetic information. Franklin also contributed new insight on the structure of viruses, helping to lay the foundation for the field of structural virology. Franklin attended St. Paul’s Girls’ School before studying physical chemistry at Newnham College, University of Cambridge. After graduating in 1941, she received a fellowship to conduct research in physical chemistry at Cambridge. But the advance of World War II changed her course of action: not only did she serve as a London air raid warden, but in 1942 she gave up her fellowship to work for the British Coal Utilization Research Association, where she investigated the physical chemistry of carbon and coal for the war effort. Nevertheless, she was able to use this research for her doctoral thesis, and in 1945 she received a doctorate from Cambridge. From 1947 to 1950 she worked with Jacques Méring at the State Chemical Laboratory in Paris, studying X-ray diffraction technology. That work led to her research on the structural changes caused by the formation of graphite in heated carbons—work that proved valuable for the coking industry. 
-
-      In 1951 Franklin joined the Biophysical Laboratory at King’s College, London, as a research fellow. There she applied X-ray diffraction methods to the study of DNA. When she began her research at King’s College, extraordinarily little was known about the chemical makeup or structure of DNA. However, she soon discovered the density of DNA and, more importantly, established that the molecule existed in a helical conformation. Her work to make clearer X-ray patterns of DNA molecules laid the foundation for James Watson and Francis Crick to suggest in 1953 that the structure of DNA is a double helix. polymer, a spiral consisting of two DNA strands wound around each other.`,
-  },
-  {
-    id: 3,
     name: "Mary Jackson",
     illustration: require("./assets/Mary_Jackson.png"),
     content: `She was born April 1921 and passed away February 2005 at the age of 83.
@@ -32,6 +24,18 @@ It was a great invention that leads to two results:
 
 2- enabled other fields of manufacturing, car and airplane to build more advanced products, Specially airplanes.  `,
   },
+  {
+    id: 3,
+    name: "Chien-Shiung Wu",
+    illustration: require("./assets/Chien_Shiung_Wu.png"),
+    content: `Chen-Shiung Wu was a Chinese-American physicist. She was born in 1912 in the Jiangsu province in China. There she attended a school owned by her father. He encouraged Wu to study science even though education for girls was not common in China at the time. She later went to university in Shanghai, studying physics, and in 1936 she moved to California to do her Ph.D.
+
+Wu is known for her contribution to nuclear- and particle physics. During World War II she worked on the [Manhattan project], helping figuring out the process of splitting [uranium] metal into uranium isotopes. In addition to contributing to significant breakthroughs in physics, her investigation into the structure of [hemoglobin] contributed to answering important questions in biology regarding blood and sickle cell anemia. 
+
+In 1956 she did research with Tsung Dao Lee and Chen Ning Yang, who are both men. Their experiments made breakthroughs in nuclear physics which resulted in Lee and Yang winning the Nobel Prize in physics in 1957. Although Wu did not win this Nobel Prize, she has won several awards for her work. Among these are the National Medal of Science, and the Wolf prize in physics. 
+    `,
+  },
+
   {
     id: 4,
     name: "Mae Jemison",
@@ -136,9 +140,10 @@ Noether’s  theorem has been called one of the most important mathematical theo
   },
   {
     id: 14,
-    name: "Chien Shiung Wu",
-    illustration: require("./assets/Chien_Shiung_Wu.png"),
-    content:
-      "Mary Jackson (née Winston,[1] April 9, 1921 – February 11, 2005) was an American mathematician and aerospace engineer at the National Advisory Committee for Aeronautics (NACA), which in 1958 was succeeded by the National Aeronautics and Space Administration (NASA).  ",
+    name: "Rosalind Franklin",
+    illustration: require("./assets/Rosalind_Franklin.png"),
+    content: `Rosalind Franklin, in full Rosalind Elsie Franklin, (born July 25, 1920,London, England—died April 16, 1958, London), British scientist best known for her contributions to the discovery of the molecular structure of deoxyribonucleic acid (DNA), a constituent of chromosomes that serves to encode genetic information. Franklin also contributed new insight on the structure of viruses, helping to lay the foundation for the field of structural virology. Franklin attended St. Paul’s Girls’ School before studying physical chemistry at Newnham College, University of Cambridge. After graduating in 1941, she received a fellowship to conduct research in physical chemistry at Cambridge. But the advance of World War II changed her course of action: not only did she serve as a London air raid warden, but in 1942 she gave up her fellowship to work for the British Coal Utilization Research Association, where she investigated the physical chemistry of carbon and coal for the war effort. Nevertheless, she was able to use this research for her doctoral thesis, and in 1945 she received a doctorate from Cambridge. From 1947 to 1950 she worked with Jacques Méring at the State Chemical Laboratory in Paris, studying X-ray diffraction technology. That work led to her research on the structural changes caused by the formation of graphite in heated carbons—work that proved valuable for the coking industry. 
+
+      In 1951 Franklin joined the Biophysical Laboratory at King’s College, London, as a research fellow. There she applied X-ray diffraction methods to the study of DNA. When she began her research at King’s College, extraordinarily little was known about the chemical makeup or structure of DNA. However, she soon discovered the density of DNA and, more importantly, established that the molecule existed in a helical conformation. Her work to make clearer X-ray patterns of DNA molecules laid the foundation for James Watson and Francis Crick to suggest in 1953 that the structure of DNA is a double helix. polymer, a spiral consisting of two DNA strands wound around each other.`,
   },
 ];
