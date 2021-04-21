@@ -1,15 +1,34 @@
+import React, { useEffect, useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import Popup from "./components/Popup/Popup";
+
 export const women = [
   {
     id: 1,
     name: "Marie Curie",
     illustration: require("./assets/Marie_Curie.png"),
-    content:
-      "Marie Skłodowska Curie , born Maria Salomea Skłodowska 7 November 1867 – 4 July 1934, was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. ",
+    content: (
+      <Text>
+        Marie Skłodowska{" "}
+        <Popup
+          text="Curie"
+          img={require("./assets/popupAssets/NASA.png")}
+          title="NASA"
+        />{" "}
+      </Text>
+    ),
   },
   {
     id: 2,
     name: "Mary Jackson",
     illustration: require("./assets/Mary_Jackson.png"),
+    popups: [
+      {
+        img: require("./assets/Mary_Jackson.png"),
+        linkText: "NASA",
+        popupContent: "titit",
+      },
+    ],
     content: `She was born April 1921 and passed away February 2005 at the age of 83.
 
 She loves science and studies hard to get degree in mathematics and physics. She was a math teacher but then ended up working for NASA.
@@ -22,8 +41,10 @@ It was a great invention that leads to two results:
 
 1- enabled scientists to make better space crafts and explore more of the galaxy at a better efficiency. 
 
-2- enabled other fields of manufacturing, car and airplane to build more advanced products, Specially airplanes.  `,
+2- enabled other fields of manufacturing, car and airplane to build more advanced products, Specially airplanes.`,
+    popupWords: ["NASA"],
   },
+
   {
     id: 3,
     name: "Chien-Shiung Wu",
