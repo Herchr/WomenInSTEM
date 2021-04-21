@@ -3,7 +3,6 @@ import {
   SafeAreaView,
   View,
   Text,
-  text,
   StyleSheet,
   Dimensions,
   ScrollView,
