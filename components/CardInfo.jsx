@@ -15,6 +15,7 @@ import FlipCard from "react-native-flip-card";
 const { height, width } = Dimensions.get("screen");
 const CardInfo = (props) => {
   const { woman } = props;
+
   return (
     <SafeAreaView style={styles.container}>
       {/* <TouchableOpacity>

@@ -8,10 +8,32 @@ import {
   Image,
 } from "react-native";
 import Modal from "react-native-modal";
+import { Audio } from 'expo-av';
 
 const { height, width } = Dimensions.get("screen");
 const Popup = (props) => {
   const [showModal, setShowModal] = useState(false);
+
+  const [sound, setSound] = React.useState();
+
+  async function playSound() {
+    console.log('Loading Sound');
+    const { sound } = await Audio.Sound.createAsync(
+       "./assets/sound/rocket.mp3"
+    );
+    setSound(sound);
+
+    console.log('Playing Sound');
+    await sound.playAsync(); }
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          console.log('Unloading Sound');
+          sound.unloadAsync(); }
+      : undefined;
+  }, [showModal]);
+
   return (
     <View style={{ justifyContent: "flex-end" }}>
       <Modal

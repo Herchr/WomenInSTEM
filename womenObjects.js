@@ -14,11 +14,12 @@ export const women = [
           text="Curie"
           img={require("./assets/popupAssets/NASA.png")}
           title="NASA"
+          sound={require("./assets/sound/rocket.mp3")}
         />{" "}
       </Text>
     ),
   },
-  {
+  /*{
     id: 2,
     name: "Mary Jackson",
     illustration: require("./assets/Mary_Jackson.png"),
@@ -166,5 +167,5 @@ Noether’s  theorem has been called one of the most important mathematical theo
     content: `Rosalind Franklin, in full Rosalind Elsie Franklin, (born July 25, 1920,London, England—died April 16, 1958, London), British scientist best known for her contributions to the discovery of the molecular structure of deoxyribonucleic acid (DNA), a constituent of chromosomes that serves to encode genetic information. Franklin also contributed new insight on the structure of viruses, helping to lay the foundation for the field of structural virology. Franklin attended St. Paul’s Girls’ School before studying physical chemistry at Newnham College, University of Cambridge. After graduating in 1941, she received a fellowship to conduct research in physical chemistry at Cambridge. But the advance of World War II changed her course of action: not only did she serve as a London air raid warden, but in 1942 she gave up her fellowship to work for the British Coal Utilization Research Association, where she investigated the physical chemistry of carbon and coal for the war effort. Nevertheless, she was able to use this research for her doctoral thesis, and in 1945 she received a doctorate from Cambridge. From 1947 to 1950 she worked with Jacques Méring at the State Chemical Laboratory in Paris, studying X-ray diffraction technology. That work led to her research on the structural changes caused by the formation of graphite in heated carbons—work that proved valuable for the coking industry. 
 
       In 1951 Franklin joined the Biophysical Laboratory at King’s College, London, as a research fellow. There she applied X-ray diffraction methods to the study of DNA. When she began her research at King’s College, extraordinarily little was known about the chemical makeup or structure of DNA. However, she soon discovered the density of DNA and, more importantly, established that the molecule existed in a helical conformation. Her work to make clearer X-ray patterns of DNA molecules laid the foundation for James Watson and Francis Crick to suggest in 1953 that the structure of DNA is a double helix. polymer, a spiral consisting of two DNA strands wound around each other.`,
-  },
+  },*/
 ];
