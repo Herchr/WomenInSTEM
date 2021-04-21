@@ -21,8 +21,6 @@ const Popup = (props) => {
         }}
         animationIn="zoomIn"
         animationOut="zoomOut"
-        animationInTiming={500}
-        animationOutTiming={500}
       >
         <View style={styles.modal}>
           <View style={styles.topSection}>
@@ -57,7 +55,7 @@ const Popup = (props) => {
       >
         <Text
           style={{
-            color: "blue",
+            color: "#3366BB",
             fontSize: 20,
             fontWeight: "400",
             fontFamily: "Futura",
