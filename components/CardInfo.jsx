@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     color: "#222",
     fontSize: 30,
     fontWeight: "500",
+    fontFamily: "Futura",
     marginTop: 80,
   },
   scrollViewContainer: {
@@ -50,9 +51,10 @@ const styles = StyleSheet.create({
     marginTop: height * 0.05,
   },
   content: {
-    color: "#222",
+    color: "#333",
     fontSize: 20,
     fontWeight: "400",
+    fontFamily: "Futura",
   },
 });
 export default CardInfo;
