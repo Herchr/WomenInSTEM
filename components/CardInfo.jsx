@@ -7,7 +7,7 @@ import {
   Dimensions,
   ScrollView,
   TouchableOpacity,
-  Pressable,
+  Image,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import FlipCard from "react-native-flip-card";

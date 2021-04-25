@@ -38,8 +38,9 @@ const Popup = (props) => {
           <View
             style={{
               borderWidth: StyleSheet.hairlineWidth,
-              width: width * 0.8,
+              width: width * 0.7,
               alignSelf: "center",
+              marginTop: 15,
             }}
           />
           <View style={styles.content}>
@@ -76,29 +77,37 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 20,
     alignSelf: "center",
+    marginHorizontal: 20,
   },
   content: {
     flex: -1,
-    paddingVertical: 20,
+    paddingVertical: 15,
     paddingHorizontal: 30,
   },
   img: {
     height: 120,
     width: 120,
     left: 15,
+    borderRadius: 150,
   },
-  text: { color: "#333", fontSize: 24, fontFamily: "Futura" },
+  text: { color: "#333", fontSize: 20, fontFamily: "Futura" },
 
   topSection: {
     flex: -1,
     flexDirection: "row",
     flexWrap: "wrap",
-    paddingTop: 10,
+    paddingTop: 15,
   },
-  titleContainer: { flex: 1, justifyContent: "center", alignItems: "center" },
+  titleContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 15,
+    marginLeft: 30,
+  },
   titleText: {
-    fontWeight: "700",
-    fontSize: 35,
+    fontWeight: "600",
+    fontSize: 40,
     flex: -1,
   },
 });

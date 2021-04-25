@@ -98,8 +98,7 @@ She first retired from the Navy in 1966 at the age of 60, but the Navy recalled 
     content: (
       <Text>
         Margaret Hamilton is one of the most famous computer programmers. She
-        was born August 17, 1936. She was a curious child and always asked her
-        dad tons of questions, question after question. {"\n"}
+        was born in 1936 in Indiana, US. She was a curious child. {"\n"}
         {"\n"}In college Margaret majored in math, philosophy and physics.
         Though she was one of the only girls in math class, the head of the
         Department was a woman. For the first time Margaret saw a woman doing
@@ -111,10 +110,15 @@ She first retired from the Navy in 1966 at the age of 60, but the Navy recalled 
           title="NASA"
           content="The National Aeronautics and Space Administration is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research"
         />{" "}
-        she was a little different from her coworkers. She was a mom. Margaret
-        would bring her daughter more into the lab to play while Margaret wrote
-        the programs that controlled the spaceships. Margaret and her team
-        worked on the Apollo 11 project
+        Margaret and her team worked on developing the on-flight software for
+        the{" "}
+        <Popup
+          linkText="Apollo 11"
+          img={require("./assets/popupAssets/APOLLO11.png")}
+          title="Apollo 11"
+          content="The spaceflight that first landed humans on the Moon. Neil Armstrong and Buzz Aldrin formed the American crew that landed the Apollo Lunar Module Eagle on July 20, 1969"
+        />{" "}
+        project
       </Text>
     ),
   },
@@ -179,8 +183,41 @@ Noether’s  theorem has been called one of the most important mathematical theo
     id: 14,
     name: "Rosalind Franklin",
     illustration: require("./assets/Rosalind_Franklin.png"),
-    content: `Rosalind Franklin, in full Rosalind Elsie Franklin, (born July 25, 1920,London, England—died April 16, 1958, London), British scientist best known for her contributions to the discovery of the molecular structure of deoxyribonucleic acid (DNA), a constituent of chromosomes that serves to encode genetic information. Franklin also contributed new insight on the structure of viruses, helping to lay the foundation for the field of structural virology. Franklin attended St. Paul’s Girls’ School before studying physical chemistry at Newnham College, University of Cambridge. After graduating in 1941, she received a fellowship to conduct research in physical chemistry at Cambridge. But the advance of World War II changed her course of action: not only did she serve as a London air raid warden, but in 1942 she gave up her fellowship to work for the British Coal Utilization Research Association, where she investigated the physical chemistry of carbon and coal for the war effort. Nevertheless, she was able to use this research for her doctoral thesis, and in 1945 she received a doctorate from Cambridge. From 1947 to 1950 she worked with Jacques Méring at the State Chemical Laboratory in Paris, studying X-ray diffraction technology. That work led to her research on the structural changes caused by the formation of graphite in heated carbons—work that proved valuable for the coking industry. 
-
-      In 1951 Franklin joined the Biophysical Laboratory at King’s College, London, as a research fellow. There she applied X-ray diffraction methods to the study of DNA. When she began her research at King’s College, extraordinarily little was known about the chemical makeup or structure of DNA. However, she soon discovered the density of DNA and, more importantly, established that the molecule existed in a helical conformation. Her work to make clearer X-ray patterns of DNA molecules laid the foundation for James Watson and Francis Crick to suggest in 1953 that the structure of DNA is a double helix. polymer, a spiral consisting of two DNA strands wound around each other.`,
+    content: (
+      <Text>
+        Rosalind Franklin was born in 1920 in London, England, and died in 1958.
+        She was a British scientist best known for her contributions to the
+        discovery of the molecular structure of{" "}
+        <Popup
+          linkText="DNA"
+          img={require("./assets/popupAssets/DNA.png")}
+          title="DNA"
+          content="DNA is short for deoxyribonucleic acid. It is present in every cell of every living thing. DNA is found in structures of the cell called chromosomes."
+        />
+        . {"\n"}
+        {"\n"}
+        The discovery of the structure of DNA was one of the most important
+        scientific achievements in the last century, and in human history.
+        Rosalind wanted to become a scientist ever since she was a teenager,
+        which was not a common or easy career path for girls at that time. She
+        excelled at science anyway. {"\n"}
+        {"\n"}
+        She is famous for applying{" "}
+        <Popup
+          linkText="X-Ray Diffraction"
+          img={require("./assets/popupAssets/XRAY.png")}
+          title="X-Ray Diffraction"
+          content="The experimental science determining the atomic and molecular structure of a crystal, in which the crystalline structure causes a beam of incident X-rays to diffract into many specific directions"
+        />{" "}
+        methods to the study of{" "}
+        <Popup
+          linkText="DNA"
+          img={require("./assets/popupAssets/DNA.png")}
+          title="DNA"
+          content="DNA is short for deoxyribonucleic acid. It is present in every cell of every living thing. DNA is found in structures of the cell called chromosomes."
+        />
+        . This work make her the unsung mother of the double helix.
+      </Text>
+    ),
   },
 ];
