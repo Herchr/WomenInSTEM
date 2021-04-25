@@ -13,7 +13,7 @@ import { Audio } from 'expo-av';
 const { height, width } = Dimensions.get("screen");
 const Popup = (props) => {
   const [showModal, setShowModal] = useState(false);
-
+  /*
   const [sound, setSound] = React.useState();
 
   async function playSound() {
@@ -32,7 +32,7 @@ const Popup = (props) => {
           console.log('Unloading Sound');
           sound.unloadAsync(); }
       : undefined;
-  }, [showModal]);
+  }, [showModal]);*/
 
   return (
     <View style={{ justifyContent: "flex-end" }}>

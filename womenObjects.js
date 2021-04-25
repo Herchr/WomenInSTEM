@@ -14,7 +14,7 @@ export const women = [
           text="Curie"
           img={require("./assets/popupAssets/NASA.png")}
           title="NASA"
-          sound={require("./assets/sound/rocket.mp3")}
+          //sound={require("./assets/sound/rocket.mp3")}
         />{" "}
       </Text>
     ),
