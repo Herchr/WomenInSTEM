@@ -11,9 +11,10 @@ export const women = [
       <Text>
         Marie Skłodowska{" "}
         <Popup
-          text="Curie"
+          linkText="Curie"
           img={require("./assets/popupAssets/NASA.png")}
           title="NASA"
+          content="The National Aeronautics and Space Administration is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research"
           //sound={require("./assets/sound/rocket.mp3")}
         />{" "}
       </Text>
@@ -95,13 +96,28 @@ She first retired from the Navy in 1966 at the age of 60, but the Navy recalled 
     id: 7,
     name: "Margaret Hamilton",
     illustration: require("./assets/Margaret_Hamilton.png"),
-    content: `Margaret Hamilton is one of the most famous computer programmers. She was born August 17, 1936. She was a curious child and always asked her dad tons of questions, question after question. 
-
-In college Margaret majored in math, philosophy and physics. Though she was one of the only girls in math class, the head of the Department was a woman. For the first time Margaret saw a woman doing work she could imagine doing, too.
-
-While she was working for NASA she was a little different from her coworkers. She was a mom. Margaret would bring her daughter more into the lab to play while Margaret wrote the programs that controlled the spaceships.
-
-Margaret and her team worked on the Apollo 11 project`,
+    content: (
+      <Text>
+        Margaret Hamilton is one of the most famous computer programmers. She
+        was born August 17, 1936. She was a curious child and always asked her
+        dad tons of questions, question after question. {"\n"}
+        {"\n"}In college Margaret majored in math, philosophy and physics.
+        Though she was one of the only girls in math class, the head of the
+        Department was a woman. For the first time Margaret saw a woman doing
+        work she could imagine doing, too. {"\n"}
+        {"\n"}While she was working for{" "}
+        <Popup
+          linkText="NASA"
+          img={require("./assets/popupAssets/NASA.png")}
+          title="NASA"
+          content="The National Aeronautics and Space Administration is an independent agency of the U.S. federal government responsible for the civilian space program, as well as aeronautics and space research"
+        />{" "}
+        she was a little different from her coworkers. She was a mom. Margaret
+        would bring her daughter more into the lab to play while Margaret wrote
+        the programs that controlled the spaceships. Margaret and her team
+        worked on the Apollo 11 project
+      </Text>
+    ),
   },
 
   {
