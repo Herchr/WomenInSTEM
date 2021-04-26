@@ -209,6 +209,7 @@ Noether’s  theorem has been called one of the most important mathematical theo
           img={require("./assets/popupAssets/XRAY.png")}
           title="X-Ray Diffraction"
           content="The experimental science determining the atomic and molecular structure of a crystal, in which the crystalline structure causes a beam of incident X-rays to diffract into many specific directions"
+          sound={require("./assets/sound/rocket.mp3")}
         />{" "}
         methods to the study of{" "}
         <Popup
