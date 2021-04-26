@@ -8,7 +8,7 @@ import {
   Image,
 } from "react-native";
 import Modal from "react-native-modal";
-import { Audio } from 'expo-av';
+import { Audio } from "expo-av";
 
 const { height, width } = Dimensions.get("screen");
 const Popup = (props) => {
@@ -34,18 +34,20 @@ const Popup = (props) => {
       : undefined;
   }, [showModal]);*/
 
-  let popupSound =  null;
-  if (props.sound) {
-    popupSound = props.sound;
-  }
+  console.log(typeof props.sound);
+  let popupSound = props.sound;
 
   async function handlePress() {
     try {
-       const { sound: soundObject, status } = await 
-          Audio.Sound.createAsync({ popupSound }, { shouldPlay: true });
-       await soundObject.playAsync();
-       } catch (error) { console.log(error); }
-   }
+      const { sound: soundObject, status } = await Audio.Sound.createAsync(
+        { popupSound },
+        { shouldPlay: true }
+      );
+      await soundObject.playAsync();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <View style={{}}>
