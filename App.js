@@ -5,16 +5,17 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
+  Button,
 } from "react-native";
 import Carousel from "./components/Carousel";
 import { women } from "./womenObjects";
 import { Octicons } from "@expo/vector-icons";
+import { Audio } from 'expo-av';
 
-// const source = require('./assets/sound/menu.mp3');
+const source = require('./assets/sound/menu.mp3');
 
 export default function App() {
   const [mute, setMute] = useState(false);
-  /*
   const [sound, setSound] = React.useState();
 
   async function playSound() {
@@ -34,7 +35,7 @@ export default function App() {
           sound.unloadAsync(); }
       : undefined;
   }, [sound]);
-  */
+  
  
   return (
     <View style={styles.container}>
