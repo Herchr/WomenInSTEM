@@ -14,7 +14,7 @@ export default function App() {
   const [mute, setMute] = useState(false);
   return (
     <View style={styles.container}>
-      {mute ? (
+      {/* {mute ? (
         <TouchableOpacity
           style={styles.muteIcon}
           onPress={() => {
@@ -32,7 +32,7 @@ export default function App() {
         >
           <Octicons name="unmute" size={40} color="#111" />
         </TouchableOpacity>
-      )}
+      )} */}
 
       <Carousel women={women} />
     </View>

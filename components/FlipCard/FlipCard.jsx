@@ -263,7 +263,7 @@ export default class FlipCard extends Component {
             }}
           >
             <View style={{ opacity: this.state.clicked ? 1 : 0 }}>
-              <Ionicons name="close" size={50} color="#555" />
+              <Ionicons name="close" size={50} color="#111" />
             </View>
           </TouchableOpacity>
           {render_side}
