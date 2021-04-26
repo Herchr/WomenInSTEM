@@ -16,23 +16,33 @@ const source = require("./assets/sound/menu.mp3");
 
 export default function App() {
   const [mute, setMute] = useState(false);
-  //const [sound, setSound] = useState(true);
+  //const [sound, setSound] = useState();
+  // async function fetchSound() {
+  //   const { sound, status } = await Audio.Sound.createAsync(source, {
+  //     shouldPlay: mute,
+  //   });
+  //   setSound(sound);
+  // }
+  // async function playSound(sound) {
+  //   console.log("Loading Sound");
+  //   //setSound(sound);
+  //   console.log("Playing Sound");
+  //   const { sound, status } = await Audio.Sound.createAsync(source, {
+  //     shouldPlay: mute,
+  //   });
+  //   await sound.playAsync();
+  // }
 
-  async function playSound() {
-    console.log("Loading Sound");
-    const { sound } = await Audio.Sound.createAsync(source);
-    //setSound(sound);
-    console.log("Playing Sound");
-    mute ? await sound.unloadAsync() : await sound.playAsync();
-  }
+  // async function pauseSound(sound) {
+  //   const { sound, status } = await Audio.Sound.createAsync(source, {
+  //     shouldPlay: mute,
+  //   });
+  //   await sound.setIsMutedAsync(true);
+  // }
 
-  async function pause() {
-    sound.setOnPlaybackStatusUpdate(mute);
-  }
-
-  useEffect(() => {
-    playSound();
-  }, []);
+  // useEffect(() => {
+  //   playSound();
+  // }, []);
 
   return (
     <View style={styles.container}>
@@ -41,7 +51,6 @@ export default function App() {
           style={styles.muteIcon}
           onPress={() => {
             setMute(!mute);
-            playSound();
           }}
         >
           <Octicons name="mute" size={40} color="#111" />
@@ -51,7 +60,6 @@ export default function App() {
           style={styles.muteIcon}
           onPress={() => {
             setMute(!mute);
-            playSound();
           }}
         >
           <Octicons name="unmute" size={40} color="#111" />
@@ -61,7 +69,7 @@ export default function App() {
       <Carousel women={women} />
       <TouchableOpacity
         onPress={() => {
-          playSound();
+          //playSound();
           console.log("touched");
         }}
       >

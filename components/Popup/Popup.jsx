@@ -39,10 +39,10 @@ const Popup = (props) => {
 
   async function handlePress() {
     try {
-      const { sound: soundObject, status } = await Audio.Sound.createAsync(
-        { popupSound },
-        { shouldPlay: true }
-      );
+      const {
+        sound: soundObject,
+        status,
+      } = await Audio.Sound.createAsync(popupSound, { shouldPlay: true });
       await soundObject.playAsync();
     } catch (error) {
       console.log(error);
