@@ -196,11 +196,17 @@ Noether’s  theorem has been called one of the most important mathematical theo
         />
         . {"\n"}
         {"\n"}
-        The discovery of the structure of DNA was one of the most important
-        scientific achievements in the last century, and in human history.
-        Rosalind wanted to become a scientist ever since she was a teenager,
-        which was not a common or easy career path for girls at that time. She
-        excelled at science anyway. {"\n"}
+        The discovery of the structure of{" "}
+        <Popup
+          linkText="DNA"
+          img={require("./assets/popupAssets/DNA.png")}
+          title="DNA"
+          content="DNA is short for deoxyribonucleic acid. It is present in every cell of every living thing. DNA is found in structures of the cell called chromosomes."
+        />{" "}
+        was one of the most important scientific achievements in the last
+        century, and in human history. Rosalind wanted to become a scientist
+        ever since she was a teenager, which was not a common or easy career
+        path for girls at that time. She excelled at science anyway. {"\n"}
         {"\n"}
         She is famous for applying{" "}
         <Popup

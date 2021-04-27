@@ -32,20 +32,10 @@ const Carousel = (props) => {
   const scrollX = useSharedValue(0);
   const expand = useSharedValue(0);
   const backHeight = useDerivedValue(() => {
-    return interpolate(
-      expand.value,
-      [0, 1],
-      [height * 0.5, height],
-      Extrapolate.CLAMP
-    );
+    return interpolate(expand.value, [0, 1], [422, height], Extrapolate.CLAMP);
   });
   const backWidth = useDerivedValue(() => {
-    return interpolate(
-      expand.value,
-      [0, 1],
-      [width * 0.7, width],
-      Extrapolate.CLAMP
-    );
+    return interpolate(expand.value, [0, 1], [273, width], Extrapolate.CLAMP);
   });
 
   const scrollHandler = useAnimatedScrollHandler({
