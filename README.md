@@ -9,3 +9,8 @@ Starting the app:
 7. Using your phone's camera app, scan the Tunnel QR code. You'll be prompted to open the Expo app which will then show the output of the React Native code.
 8. This should open the app!
 
+
+
+
+https://user-images.githubusercontent.com/32057462/157883820-9fa551de-3769-49fa-b3fc-65e818c5ab3e.mov
+
